@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduGenie is an AI-powered educational assistant for learning, quizzes, summaries, and study plans.">
+  <title>EduGenie | AI Learning Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/"><span class="brand-mark">E</span><span>EduGenie</span></a>
+      <p class="side-label">LEARNING TOOLS</p>
+      <nav class="nav">
+        <button class="nav-item active" data-view="ask"><span>✦</span> Ask AI</button>
+        <button class="nav-item" data-view="simplify"><span>◈</span> Simplify concept</button>
+        <button class="nav-item" data-view="quiz"><span>▤</span> Generate quiz</button>
+        <button class="nav-item" data-view="path"><span>⌁</span> Learning path</button>
+        <button class="nav-item" data-view="summarize"><span>≡</span> Summarizer</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-note"><strong>Learn at your pace.</strong><p>Ask questions, practise, and build understanding one step at a time.</p></div>
+        <span class="version">EduGenie · v1.0</span>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div><span class="eyebrow">YOUR PERSONAL STUDY SPACE</span><h1 id="pageTitle">Ask EduGenie</h1></div>
+        <label class="level-control">Level
+          <select id="levelSelect" aria-label="Learning level">
+            <option>Beginner</option><option>School student</option><option>Intermediate</option><option>Advanced</option>
+          </select>
+        </label>
+      </header>
+
+      <section class="workspace">
+        <div class="intro" id="intro">
+          <div class="sparkle">✦</div>
+          <h2 id="heroTitle">What would you like to learn today?</h2>
+          <p id="heroText">Ask a question and get a clear explanation tailored to your learning level.</p>
+        </div>
+
+        <div class="prompt-area" id="promptArea">
+          <label class="field-label" id="inputLabel" for="mainInput">Your question</label>
+          <textarea id="mainInput" rows="5" placeholder="For example: Which is the largest ocean?"></textarea>
+          <div class="form-row" id="extraOptions"></div>
+          <div class="submit-row">
+            <span class="privacy-note">Your API key is kept on the server.</span>
+            <button class="primary-btn" id="submitBtn">Ask EduGenie <span>→</span></button>
+          </div>
+        </div>
+
+        <div class="result-wrap" id="resultWrap" hidden>
+          <div class="result-heading"><div><span class="result-kicker">EDUGENIE RESPONSE</span><h3 id="resultTitle">Your answer</h3></div><button class="copy-btn" id="copyBtn">Copy</button></div>
+          <div class="result-content" id="resultContent"></div>
+        </div>
+        <div class="suggestions" id="suggestions">
+          <span class="suggestion-label">TRY ASKING</span>
+          <div class="suggestion-list">
+            <button class="suggestion">Which is the largest ocean?</button>
+            <button class="suggestion">Explain photosynthesis simply</button>
+            <button class="suggestion">How does SQL work?</button>
+          </div>
+        </div>
+        <footer>EduGenie can make mistakes. Verify important information with trusted learning materials.</footer>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

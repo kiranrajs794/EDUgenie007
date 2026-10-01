@@ -140,7 +140,3 @@ Replace `YOUR_USERNAME` with your GitHub username. If Git asks you to authentica
 ## Current scope and next steps
 
 This is a local-development starter project. It does not include user accounts, saved chat history, a database, teacher/admin dashboards, or production deployment configuration. Before public deployment, add authentication and rate limiting, set restrictive request limits, configure HTTPS and trusted origins as appropriate, and review privacy and content-safety requirements.
-
-## License
-
-Choose a license before publishing if you want others to reuse or modify the project. For example, add an MIT `LICENSE` file if that matches your intended distribution.
